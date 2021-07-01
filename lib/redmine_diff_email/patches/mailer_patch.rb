@@ -14,7 +14,7 @@ module RedmineDiffEmail
 
       module InstanceMethods
 
-        def changeset_added(changeset, is_attached)
+        def changeset_added(user_author, changeset, is_attached)
 
           @project = changeset.repository.project
 

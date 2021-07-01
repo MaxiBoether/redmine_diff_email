@@ -18,7 +18,7 @@ module RedmineDiffEmail
 
         def send_notification
           if repository.is_diff_email?
-            Mailer.changeset_added(self, repository.is_diff_email_attached?).deliver
+            Mailer.changeset_added(self.user, self, repository.is_diff_email_attached?).deliver
           end
         end
 
